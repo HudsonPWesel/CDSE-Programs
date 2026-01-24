@@ -1,9 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="Dll1.vcxproj">
-    <BuildType Solution="Debug|x64" Project="Release" />
-  </Project>
-</Solution>
