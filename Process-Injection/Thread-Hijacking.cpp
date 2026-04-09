@@ -144,3 +144,7 @@ int main(int argc, char *argv[])
     CloseHandle(targetProcess);
     return 0;
 }
+
+// AllocMemory
+// WriteShellcode
+// CreateThread

@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
     WriteProcessMemory(hProcess, dllPathAddr, path, sizeof(path), &bytesWritten);
 
     LPDWORD threadID{};
-    CreateRemoteThread(hProcess, NULL, 0, (LPTHREAD_START_ROUTINE)GetProcAddress(GetModuleHandle("kernel32.dll"), "LoadLibraryA"), NULL, 0, threadID);
+    CreateRemoteThread(hProcess, NULL, 0, (LPTHREAD_START_ROUTINE)GetProcAddress(GetModuleHandle((LPCWSTR) "kernel32.dll"), "LoadLibraryA"), NULL, 0, threadID);
 
     return 0;
 }
